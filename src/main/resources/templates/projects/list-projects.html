@@ -6,41 +6,27 @@
 
 <head th:replace="layouts :: header"></header>
 
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-
 <body>
 <nav th:replace="layouts :: navbar"></nav>
 	<div class="container">
 	<br/>
 	<a class="btn btn-primary" th:href="@{/projects/new}" role="button">Add new project</a>
 	<h2> List of project</h2>
-		<table>
+<table class="table table-borded table-striped">
+<thead class="thead-dark"> 
   <tr>
     <th>Project name</th>
     <th>Description</th>
     <th>Stage</th>
   </tr>
+ </thead>
+ <tbody>
   <tr th:each="aproject: ${projectList}">
     <td th:text="${aproject.name}"></td>
     <td th:text="${aproject.description}"></td>
     <td th:text="${aproject.stage}"></td>
   </tr>
+ </tbody>
 </table>
 	</div>
 	

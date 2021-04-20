@@ -5,30 +5,86 @@
 
 
 <head th:replace="layouts :: header"></header>
-
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
-
 <body>
 <nav th:replace="layouts :: navbar"></nav>
+
+<div class="row">
+  <div class="col-sm-6"><div class="container">
+	<h2> List of project</h2>
+<table class="table table-borded table-striped">
+<thead class="thead-dark"> 
+  <tr>
+    <th>Project name</th>
+    <th>Description</th>
+    <th>Stage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr th:each="aproject: ${projectList}">
+    <td th:text="${aproject.name}"></td>
+    <td th:text="${aproject.description}"></td>
+    <td th:text="${aproject.stage}"></td>
+  </tr>
+ </tbody>
+</table>
+</div></div>
+ <div class="col-sm-6 container">
+      <canvas id="myPieChart" width="200" height="100"></canvas>
+  </div>
+  <div class="col-sm-6"><!-- employees-->
 	<div class="container">
-	<h2> Home page</h2>
-	</div>
+	<br/>
+	<h2> List of Employees with Assigned project</h2>
+<table class="table table-borded table-striped">
+<thead class="thead-dark"> 
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+  </tr>
+</thead>
+<tbody>
+  <tr th:each="anEmploy: ${employeesList}">
+    <td th:text="${anEmploy.firstName}"></td>
+    <td th:text="${anEmploy.lastName}"></td>
+    <td th:text="${anEmploy.email}"></td>
+  </tr>
+</tbody>
+</table>
+	</div></div>
+	
+	
+  <div class="col-sm-6"><!-- employees-->
+	<div class="container">
+	<br/>
+	<h2> Employees with assigned project</h2>
+<table class="table table-borded table-striped">
+<thead class="thead-dark"> 
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Number of projects</th>
+  </tr>
+</thead>
+<tbody>
+  <tr th:each="anEmploy: ${employeesListProjectCnt}">
+    <td th:text="${anEmploy.firstName}"></td>
+    <td th:text="${anEmploy.lastName}"></td>
+    <td th:text="${anEmploy.projectCount}"></td>
+  </tr>
+</tbody>
+</table>
+	</div></div>
+	
+ 
+</div>
+	<script>
+	var chartDAta = "[[${projectStatus}]]"
+	console.log(chartDAta);
+	</script>
+	
+	
+<script type="text/javascript" th:src="@{js/myChart.js}"></script>
 	
 </body>
 
