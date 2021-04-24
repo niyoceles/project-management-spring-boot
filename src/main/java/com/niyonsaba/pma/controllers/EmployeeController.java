@@ -11,12 +11,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.niyonsaba.pma.dao.EmployeeRepository;
 import com.niyonsaba.pma.entities.Employee;
+import com.niyonsaba.pma.services.EmployeeService;
 
 @Controller
 @RequestMapping("/employees")
 public class EmployeeController {
 	@Autowired
 	EmployeeRepository employeeRepo;
+	
+	EmployeeService employeeService;
 	
 	@GetMapping("/new")
 	public String displayEmployeeForm(Model model) {
