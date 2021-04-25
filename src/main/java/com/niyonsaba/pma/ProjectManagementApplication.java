@@ -10,7 +10,7 @@ import com.niyonsaba.pma.dao.EmployeeRepository;
 import com.niyonsaba.pma.dao.ProjectRepository;
 
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages={"com.niyonsaba.pma", "com.niyonsaba.utils"})
 public class ProjectManagementApplication {
 	
 	@Autowired

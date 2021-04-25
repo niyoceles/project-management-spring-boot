@@ -11,17 +11,21 @@
 	<br/>
 	<a class="btn btn-primary" th:href="@{/employees/new}" role="button">Add new employee</a>
 	<h2> List of Employees</h2>
-		<table>
+<table class="table table-borded table-striped">
+<thead class="thead-dark"> 
   <tr>
     <th>First name</th>
     <th>Last name</th>
     <th>Email</th>
   </tr>
+</thead>
+<tbody
   <tr th:each="anEmploy: ${employeesList}">
     <td th:text="${anEmploy.firstName}"></td>
     <td th:text="${anEmploy.lastName}"></td>
     <td th:text="${anEmploy.email}"></td>
   </tr>
+  <tbody>
 </table>
 	</div>
 	

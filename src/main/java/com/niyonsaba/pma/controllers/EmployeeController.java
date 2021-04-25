@@ -9,16 +9,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.niyonsaba.pma.dao.EmployeeRepository;
 import com.niyonsaba.pma.entities.Employee;
 import com.niyonsaba.pma.services.EmployeeService;
 
 @Controller
 @RequestMapping("/employees")
 public class EmployeeController {
+//	@Autowired
+//	EmployeeRepository employeeRepo;
 	@Autowired
-	EmployeeRepository employeeRepo;
-	
 	EmployeeService employeeService;
 	
 	@GetMapping("/new")
@@ -35,7 +34,7 @@ public class EmployeeController {
 	@PostMapping("/save")
 	public String createEmployee(Employee employee, Model model) {
 		
-		employeeRepo.save(employee);
+		employeeService.save(employee);
 		
 		return "redirect:/employees/new";
 	}
@@ -43,7 +42,7 @@ public class EmployeeController {
 	@GetMapping("")
 	public String displyHomePage(Model model) {
 	
-		List<Employee> employees = employeeRepo.findAll();
+		List<Employee> employees = employeeService.getAll();
 		
 		model.addAttribute("employeesList", employees);
 		return "employees/list-employees";

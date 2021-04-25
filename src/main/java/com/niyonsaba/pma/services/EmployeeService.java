@@ -1,9 +1,13 @@
 package com.niyonsaba.pma.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.niyonsaba.pma.dao.EmployeeRepository;
+import com.niyonsaba.pma.dto.EmployeeProject;
+import com.niyonsaba.pma.entities.Employee;
 
 @Service
 public class EmployeeService {
@@ -24,6 +28,20 @@ public class EmployeeService {
 //		this.employeeRepo = employeeRepo;
 //	}
 
+	public Employee save(Employee employee) {
+		return employeeRepo.save(employee);
+		
+	}
+	
+	public List<Employee> getAll() {
+		return employeeRepo.findAll();
+		
+	}
+	
+	public List<EmployeeProject> getEmployeeProject() {
+		return employeeRepo.employeeProjects();
+		
+	}
 	
 	
 
