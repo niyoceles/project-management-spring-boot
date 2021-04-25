@@ -15,8 +15,6 @@ import com.niyonsaba.pma.services.EmployeeService;
 @Controller
 @RequestMapping("/employees")
 public class EmployeeController {
-//	@Autowired
-//	EmployeeRepository employeeRepo;
 	@Autowired
 	EmployeeService employeeService;
 	
