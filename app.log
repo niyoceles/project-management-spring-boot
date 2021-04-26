@@ -1,0 +1,21 @@
+2021-04-26 08:11:23.293  INFO 7512 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 11.0.10 on Celestins-MacBook-Pro.local with PID 7512 (/Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management/target/classes started by celestin in /Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management)
+2021-04-26 08:11:23.294 DEBUG 7512 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-26 08:11:23.294  INFO 7512 --- [restartedMain] c.n.pma.ProjectManagementApplication     : The following profiles are active: dev
+2021-04-26 08:11:23.427  INFO 7512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-26 08:11:23.435  INFO 7512 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2021-04-26 08:11:23.514  INFO 7512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-26 08:11:23.524  INFO 7512 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 228 ms
+2021-04-26 08:11:23.547  INFO 7512 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-26 08:11:23.571  INFO 7512 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 08:11:23.617  INFO 7512 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 08:11:23.706  WARN 7512 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-26 08:11:23.746  INFO 7512 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 08:11:23.832  INFO 7512 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-26 08:11:23.837  INFO 7512 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Started ProjectManagementApplication in 0.594 seconds (JVM running for 3244.29)
+2021-04-26 08:11:23.839  INFO 7512 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-26 08:17:22.139  WARN 7512 --- [HikariPool-6 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Retrograde clock change detected (housekeeper delta=28s466ms), soft-evicting connections from pool.
+2021-04-26 08:29:43.041  WARN 7512 --- [HikariPool-6 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=10m49s423ms).
+2021-04-26 08:32:04.288  INFO 7512 --- [RMI TCP Connection(70)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-04-26 08:32:04.333  INFO 7512 --- [RMI TCP Connection(70)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-26 08:32:04.333  INFO 7512 --- [RMI TCP Connection(70)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 08:32:04.556  WARN 7512 --- [RMI TCP Connection(70)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
