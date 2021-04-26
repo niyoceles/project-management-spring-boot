@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -19,11 +20,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	DataSource dataSource;
 	
+	@Autowired
+	BCryptPasswordEncoder bCryptEncoder ;
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.jdbcAuthentication().dataSource(dataSource)
-				.usersByUsernameQuery("select username, password enabled from users where username= ?" )
-				.authoritiesByUsernameQuery("select username, authority from authorities where username= ?");
+				.usersByUsernameQuery("select username, password, enabled from user_accounts where username = ?" )
+				.authoritiesByUsernameQuery("select username, role from user_accounts where username = ?")
+				.dataSource(dataSource).passwordEncoder(bCryptEncoder);
 	}
 	
 	@Bean
@@ -35,11 +40,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 				.antMatchers("/projects/new").hasRole("ADMIN")
-				.antMatchers("/employees/new").hasRole("ADMIN")
-				.antMatchers("/h2_console/**").permitAll()
-				.antMatchers("/").authenticated().and().formLogin();
-		http.csrf().disable();
-		http.headers().frameOptions().disable();
+				.antMatchers("/projects/save").hasRole("ADMIN")	
+				.antMatchers("/employees/new").hasAuthority("ADMIN")
+				.antMatchers("/employees/save").hasAuthority("ADMIN")
+				.antMatchers("/","/**").permitAll()
+				.and().formLogin();
 	}
 	
 }
