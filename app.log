@@ -1045,3 +1045,239 @@ Caused by: java.lang.IllegalArgumentException: user should not exist
 2021-04-26 09:43:24.954  INFO 8771 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2021-04-26 09:43:24.958  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Started ProjectManagementApplication in 0.935 seconds (JVM running for 2104.384)
 2021-04-26 09:43:24.959  INFO 8771 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-26 10:10:44.190  INFO 8771 --- [Thread-52] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-26 10:10:44.194  INFO 8771 --- [Thread-52] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:10:44.431  WARN 8771 --- [Thread-52] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-04-26 10:10:45.060  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 11.0.10 on Celestins-MacBook-Pro.local with PID 8771 (/Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management/target/classes started by celestin in /Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management)
+2021-04-26 10:10:45.060 DEBUG 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-26 10:10:45.060  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : The following profiles are active: dev
+2021-04-26 10:10:45.345  INFO 8771 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-26 10:10:45.360  INFO 8771 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2021-04-26 10:10:45.537  INFO 8771 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-26 10:10:45.550  INFO 8771 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 488 ms
+2021-04-26 10:10:45.615  INFO 8771 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-26 10:10:45.702  INFO 8771 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:10:45.732  INFO 8771 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 10:10:45.823  WARN 8771 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-26 10:10:45.871  INFO 8771 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ca6e57a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fbaa3ca, org.springframework.security.web.header.HeaderWriterFilter@4f5774d2, org.springframework.security.web.csrf.CsrfFilter@56ba1acd, org.springframework.security.web.authentication.logout.LogoutFilter@464aabd0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@763f7908, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@d77a666, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6abdd7ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@354c83d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4149904c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@750e99be, org.springframework.security.web.session.SessionManagementFilter@4950a45f, org.springframework.security.web.access.ExceptionTranslationFilter@4d66fd4b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26d73f6a]
+2021-04-26 10:10:45.923  INFO 8771 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 10:10:46.046  INFO 8771 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-26 10:10:46.054  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Started ProjectManagementApplication in 1.267 seconds (JVM running for 3745.516)
+2021-04-26 10:10:46.057  INFO 8771 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-26 10:10:57.360  INFO 8771 --- [Thread-57] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-26 10:10:57.362  INFO 8771 --- [Thread-57] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:10:57.568  WARN 8771 --- [Thread-57] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-04-26 10:10:57.663  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 11.0.10 on Celestins-MacBook-Pro.local with PID 8771 (/Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management/target/classes started by celestin in /Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management)
+2021-04-26 10:10:57.663 DEBUG 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-26 10:10:57.663  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : The following profiles are active: dev
+2021-04-26 10:10:57.809  INFO 8771 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-26 10:10:57.816  INFO 8771 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2021-04-26 10:10:57.901  INFO 8771 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-26 10:10:57.910  INFO 8771 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 246 ms
+2021-04-26 10:10:57.928  INFO 8771 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-26 10:10:57.983  INFO 8771 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:10:57.995  INFO 8771 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 10:10:58.073  WARN 8771 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-26 10:10:58.097  INFO 8771 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a46735f, org.springframework.security.web.context.SecurityContextPersistenceFilter@edbfa7d, org.springframework.security.web.header.HeaderWriterFilter@2c84d4de, org.springframework.security.web.csrf.CsrfFilter@59b0c4ed, org.springframework.security.web.authentication.logout.LogoutFilter@9e66c85, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ffadff9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@139f4c86, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@540cdfd2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@56b3bb1c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c1ba730, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@296cb73d, org.springframework.security.web.session.SessionManagementFilter@5113db1e, org.springframework.security.web.access.ExceptionTranslationFilter@6db6b0da, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56256701]
+2021-04-26 10:10:58.126  INFO 8771 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 10:10:58.205  INFO 8771 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-26 10:10:58.208  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Started ProjectManagementApplication in 0.563 seconds (JVM running for 3757.671)
+2021-04-26 10:10:58.209  INFO 8771 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-26 10:22:35.392  INFO 8771 --- [Thread-62] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-26 10:22:35.399  INFO 8771 --- [Thread-62] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:22:35.618  WARN 8771 --- [Thread-62] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-04-26 10:22:36.179  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 11.0.10 on Celestins-MacBook-Pro.local with PID 8771 (/Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management/target/classes started by celestin in /Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management)
+2021-04-26 10:22:36.180 DEBUG 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-26 10:22:36.180  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : The following profiles are active: dev
+2021-04-26 10:22:36.550  INFO 8771 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-26 10:22:36.558  INFO 8771 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2021-04-26 10:22:36.760  INFO 8771 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-26 10:22:36.780  INFO 8771 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 597 ms
+2021-04-26 10:22:36.860  INFO 8771 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-26 10:22:37.035  INFO 8771 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:22:37.049  INFO 8771 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 10:22:37.195  WARN 8771 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-26 10:22:37.209  WARN 8771 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfiguration': Unsatisfied dependency expressed through field 'dataSource'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'javax.activation.DataSource' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2021-04-26 10:22:37.210  INFO 8771 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:22:37.420  WARN 8771 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-04-26 10:22:37.428  INFO 8771 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-26 10:22:37.436 ERROR 8771 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field dataSource in com.niyonsaba.pma.security.SecurityConfiguration required a bean of type 'javax.activation.DataSource' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'javax.activation.DataSource' in your configuration.
+
+2021-04-26 10:24:18.841  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 11.0.10 on Celestins-MacBook-Pro.local with PID 8771 (/Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management/target/classes started by celestin in /Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management)
+2021-04-26 10:24:18.842 DEBUG 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-26 10:24:18.842  INFO 8771 --- [restartedMain] c.n.pma.ProjectManagementApplication     : The following profiles are active: dev
+2021-04-26 10:24:18.966  INFO 8771 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-26 10:24:18.974  INFO 8771 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2021-04-26 10:24:19.062  INFO 8771 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-26 10:24:19.072  INFO 8771 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 229 ms
+2021-04-26 10:24:19.095  INFO 8771 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-26 10:24:19.150  INFO 8771 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:24:19.162  INFO 8771 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 10:24:19.245  WARN 8771 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-26 10:24:19.474  WARN 8771 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [insert into users (username, password, enabled) values (?,?,?)]; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+insert into users (username, password, enabled) values (?,?,?) [42102-200]
+2021-04-26 10:24:19.475  INFO 8771 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:24:19.680  WARN 8771 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-04-26 10:24:19.688  INFO 8771 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-26 10:24:19.691 ERROR 8771 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [insert into users (username, password, enabled) values (?,?,?)]; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+insert into users (username, password, enabled) values (?,?,?) [42102-200]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:564) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:524) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.5.jar:5.3.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.5.jar:5.3.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:769) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:761) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1313) ~[spring-boot-2.4.4.jar:2.4.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-2.4.4.jar:2.4.4]
+	at com.niyonsaba.pma.ProjectManagementApplication.main(ProjectManagementApplication.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.4.jar:2.4.4]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [insert into users (username, password, enabled) values (?,?,?)]; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+insert into users (username, password, enabled) values (?,?,?) [42102-200]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.5.jar:5.3.5]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.5.jar:5.3.5]
+	... 27 common frames omitted
+Caused by: org.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [insert into users (username, password, enabled) values (?,?,?)]; nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+insert into users (username, password, enabled) values (?,?,?) [42102-200]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239) ~[spring-jdbc-5.3.5.jar:5.3.5]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70) ~[spring-jdbc-5.3.5.jar:5.3.5]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1541) ~[spring-jdbc-5.3.5.jar:5.3.5]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:667) ~[spring-jdbc-5.3.5.jar:5.3.5]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:960) ~[spring-jdbc-5.3.5.jar:5.3.5]
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:1015) ~[spring-jdbc-5.3.5.jar:5.3.5]
+	at org.springframework.security.provisioning.JdbcUserDetailsManager.createUser(JdbcUserDetailsManager.java:199) ~[spring-security-core-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.authentication.configurers.provisioning.UserDetailsManagerConfigurer.initUserDetailsService(UserDetailsManagerConfigurer.java:59) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.authentication.configurers.provisioning.JdbcUserDetailsManagerConfigurer.initUserDetailsService(JdbcUserDetailsManagerConfigurer.java:157) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.authentication.configurers.userdetails.UserDetailsServiceConfigurer.configure(UserDetailsServiceConfigurer.java:47) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.authentication.configurers.userdetails.UserDetailsServiceConfigurer.configure(UserDetailsServiceConfigurer.java:34) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.configure(AbstractConfiguredSecurityBuilder.java:349) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:303) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.authenticationManager(WebSecurityConfigurerAdapter.java:269) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:204) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:315) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:93) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at com.niyonsaba.pma.security.SecurityConfiguration$$EnhancerBySpringCGLIB$$e3a6a325.init(<generated>) ~[classes/:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:338) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:300) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:127) ~[spring-security-config-5.4.5.jar:5.4.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.5.jar:5.3.5]
+	... 28 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found; SQL statement:
+insert into users (username, password, enabled) values (?,?,?) [42102-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:205) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.message.DbException.get(DbException.java:181) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7628) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.readTableOrView(Parser.java:7599) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parseInsert(Parser.java:1747) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parsePrepared(Parser.java:954) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:843) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.parse(Parser.java:815) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.command.Parser.prepareCommand(Parser.java:738) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareLocal(Session.java:657) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.engine.Session.prepareCommand(Session.java:595) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:76) ~[h2-1.4.200.jar:1.4.200]
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:352) ~[h2-1.4.200.jar:1.4.200]
+	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:337) ~[HikariCP-3.4.5.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java) ~[HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.core.JdbcTemplate$SimplePreparedStatementCreator.createPreparedStatement(JdbcTemplate.java:1645) ~[spring-jdbc-5.3.5.jar:5.3.5]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:649) ~[spring-jdbc-5.3.5.jar:5.3.5]
+	... 52 common frames omitted
+
+2021-04-26 10:29:50.919  INFO 9989 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 11.0.10 on Celestins-MacBook-Pro.local with PID 9989 (/Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management/target/classes started by celestin in /Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management)
+2021-04-26 10:29:50.922 DEBUG 9989 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-26 10:29:50.923  INFO 9989 --- [restartedMain] c.n.pma.ProjectManagementApplication     : The following profiles are active: dev
+2021-04-26 10:29:50.973  INFO 9989 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-26 10:29:50.973  INFO 9989 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-04-26 10:29:51.583  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-26 10:29:51.585  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-04-26 10:29:51.607  INFO 9989 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.niyonsaba.pma.dao.EmployeeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-04-26 10:29:51.608  INFO 9989 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.niyonsaba.pma.dao.ProjectRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-04-26 10:29:51.609  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JDBC repository interfaces.
+2021-04-26 10:29:51.618  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-26 10:29:51.619  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-26 10:29:51.645  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2021-04-26 10:29:52.252  INFO 9989 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-26 10:29:52.329  INFO 9989 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1355 ms
+2021-04-26 10:29:52.527  INFO 9989 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-26 10:29:53.553  INFO 9989 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:29:53.585  INFO 9989 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 10:29:53.913  WARN 9989 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-26 10:29:54.085  INFO 9989 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ad4e7e9, org.springframework.security.web.context.SecurityContextPersistenceFilter@3a4415a7, org.springframework.security.web.header.HeaderWriterFilter@2ab1b2d6, org.springframework.security.web.authentication.logout.LogoutFilter@3c16d44c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@b0715a5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6b0351fa, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@11a3f8a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9f50c11, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11fd8e1e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6caff478, org.springframework.security.web.session.SessionManagementFilter@36a6b85b, org.springframework.security.web.access.ExceptionTranslationFilter@77178e7e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5aa31aab]
+2021-04-26 10:29:54.189  INFO 9989 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 10:29:54.461  INFO 9989 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-26 10:29:54.470  INFO 9989 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Started ProjectManagementApplication in 3.896 seconds (JVM running for 4.986)
+2021-04-26 10:33:12.970  INFO 9989 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-26 10:33:12.973  INFO 9989 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:33:13.195  WARN 9989 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-04-26 10:33:13.490  INFO 9989 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Starting ProjectManagementApplication using Java 11.0.10 on Celestins-MacBook-Pro.local with PID 9989 (/Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management/target/classes started by celestin in /Volumes/SSD/workspace-spring-tool-suite-4-4.10.0.RELEASE/project-management)
+2021-04-26 10:33:13.491 DEBUG 9989 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Running with Spring Boot v2.4.4, Spring v5.3.5
+2021-04-26 10:33:13.491  INFO 9989 --- [restartedMain] c.n.pma.ProjectManagementApplication     : The following profiles are active: dev
+2021-04-26 10:33:13.685  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-26 10:33:13.685  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2021-04-26 10:33:13.689  INFO 9989 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.niyonsaba.pma.dao.EmployeeRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-04-26 10:33:13.690  INFO 9989 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.niyonsaba.pma.dao.ProjectRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2021-04-26 10:33:13.691  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+2021-04-26 10:33:13.694  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-26 10:33:13.695  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-04-26 10:33:13.702  INFO 9989 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2021-04-26 10:33:13.809  INFO 9989 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-26 10:33:13.830  INFO 9989 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 335 ms
+2021-04-26 10:33:13.846  INFO 9989 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-04-26 10:33:13.911  INFO 9989 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-04-26 10:33:13.923  INFO 9989 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-04-26 10:33:14.013  WARN 9989 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-04-26 10:33:14.041  INFO 9989 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15f21db2, org.springframework.security.web.context.SecurityContextPersistenceFilter@701f15b0, org.springframework.security.web.header.HeaderWriterFilter@38a2cc29, org.springframework.security.web.authentication.logout.LogoutFilter@798f5fc4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f530d6c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7f49b676, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@650d3ce7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70dfc5bd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e329c0b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@ed49429, org.springframework.security.web.session.SessionManagementFilter@22806b50, org.springframework.security.web.access.ExceptionTranslationFilter@20b41e90, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6541de79]
+2021-04-26 10:33:14.077  INFO 9989 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-26 10:33:14.163  INFO 9989 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-26 10:33:14.167  INFO 9989 --- [restartedMain] c.n.pma.ProjectManagementApplication     : Started ProjectManagementApplication in 0.892 seconds (JVM running for 204.682)
+2021-04-26 10:33:14.170  INFO 9989 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-04-26 10:33:43.618  INFO 9989 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-26 10:33:43.622  INFO 9989 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
