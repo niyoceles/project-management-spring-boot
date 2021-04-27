@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.niyonsaba.pma.entities.Employee;
 import com.niyonsaba.pma.services.EmployeeService;
@@ -34,7 +35,7 @@ public class EmployeeController {
 		
 		employeeService.save(employee);
 		
-		return "redirect:/employees/new";
+		return "redirect:/employees";
 	}
 	
 	@GetMapping("")
@@ -44,6 +45,27 @@ public class EmployeeController {
 		
 		model.addAttribute("employeesList", employees);
 		return "employees/list-employees";
+    }
+	
+	@GetMapping("/update")
+	public String displyUpdateEmployee(@RequestParam("id") long theId, Model model) {
+	
+        Employee employee = employeeService.findById(theId);
+		
+		
+		model.addAttribute("employee", employee);
+		return "employees/new-employee";
+    }
+	
+	@GetMapping("/delete")
+	public String deleteEmployee(@RequestParam("id") long theId, Model model) {
+		
+		Employee theEmp = employeeService.findById(theId);
+	
+         employeeService.delete(theEmp);
+//		
+//		model.addAttribute("employee", employee);
+		return "redirect:/employees";
     }
 
 }

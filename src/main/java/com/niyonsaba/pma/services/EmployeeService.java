@@ -42,6 +42,15 @@ public class EmployeeService {
 		return employeeRepo.employeeProjects();
 		
 	}
+
+	public Employee findById(long theId) {
+		return employeeRepo.findByEmployeeId(theId);
+	}
+
+	public void delete(Employee theEmp) {
+		 employeeRepo.delete(theEmp);
+		
+	}
 	
 	
 

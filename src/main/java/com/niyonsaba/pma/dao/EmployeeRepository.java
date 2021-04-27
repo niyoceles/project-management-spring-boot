@@ -9,6 +9,8 @@ import com.niyonsaba.pma.dto.EmployeeProject;
 import com.niyonsaba.pma.entities.Employee;
 
 public interface EmployeeRepository extends CrudRepository<Employee, Long> {
+	
+
 	@Override
 	public List<Employee>findAll();
 	
@@ -16,5 +18,7 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 			+ "FROM employee e left join project_employee pe ON pe.employee_id = e.employee_id "
 			+ "GROUP BY e.first_name, e.last_name ORDER BY 3 DESC")
 	public List<EmployeeProject> employeeProjects();
+	
+	public Employee findByEmployeeId(long theId);
 
 }
