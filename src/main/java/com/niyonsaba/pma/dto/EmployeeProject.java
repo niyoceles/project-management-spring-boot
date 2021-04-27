@@ -6,5 +6,4 @@ public interface EmployeeProject {
 	public String getLastName();
 	public int getProjectCount();
 	
-
 }

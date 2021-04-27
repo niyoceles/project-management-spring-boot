@@ -10,12 +10,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.niyonsaba.pma.dao.UserAccountRepository;
 import com.niyonsaba.pma.entities.UserAccount;
 
+
+
 @Controller
 public class SecurityController {
 	@Autowired
 	UserAccountRepository accountRepo;
+	
 	@Autowired
-	BCryptPasswordEncoder bCryptEncoder ;
+	BCryptPasswordEncoder bCryptEncoder;
 	
 	@GetMapping("/register")
 	public String register(Model model) {

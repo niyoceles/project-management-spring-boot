@@ -70,6 +70,5 @@ public class UserAccount {
 		this.enabled = enabled;
 	}
 	
-	
 
 }
