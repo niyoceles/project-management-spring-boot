@@ -1,9 +1,8 @@
 package com.niyonsaba.pma.api.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,7 +33,7 @@ public class EmployeeApiController {
 		return employeeRepo.findById(id).get();
 	}
 	
-	@PostMapping
+	@PostMapping(consumes = "application/json")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Employee create(@RequestBody Employee employee){
 		return employeeRepo.save(employee);
@@ -58,12 +57,19 @@ public class EmployeeApiController {
 			emp.setEmail(patchEmployee.getEmail());
 		}
 		if(patchEmployee.getFirstName() != null) {
-			emp.setEmail(patchEmployee.getFirstName());
+			emp.setFirstName(patchEmployee.getFirstName());
 		}
 		if(patchEmployee.getLastName() != null) {
-			emp.setEmail(patchEmployee.getLastName());
+			emp.setLastName(patchEmployee.getLastName());
 		}
 		return employeeRepo.save(emp);
+	}
+	
+	
+	@DeleteMapping(path="/{id}", consumes = "application/json")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void deleteEmployee(@PathVariable("id") Long id) {
+		employeeRepo.deleteById(id);
 	}
 
 }
