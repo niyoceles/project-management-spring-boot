@@ -1,6 +1,9 @@
 package com.niyonsaba.pma.api.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,7 +38,7 @@ public class EmployeeApiController {
 	
 	@PostMapping(consumes = "application/json")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Employee create(@RequestBody Employee employee){
+	public Employee create(@RequestBody @Valid Employee employee){
 		return employeeRepo.save(employee);
 	}
 	
@@ -43,14 +46,14 @@ public class EmployeeApiController {
 ////	PUT updates all entire record
 	@PutMapping(consumes = "application/json")
 	@ResponseStatus(HttpStatus.OK)
-	public Employee update(@RequestBody Employee employee){
+	public Employee update(@RequestBody @Valid Employee employee){
 		return employeeRepo.save(employee);
 	}
 	
 ////	PATCH updates ANY WHERE YOU WANT BUT NOT ALL ENTIRE RECORD
 	@PatchMapping(path="/{id}", consumes = "application/json")
 	@ResponseStatus(HttpStatus.OK)
-	public Employee updateEmployee(@PathVariable("id") Long id, @RequestBody Employee patchEmployee){
+	public Employee updateEmployee(@PathVariable("id") Long id, @RequestBody @Valid Employee patchEmployee){
 		Employee emp = employeeRepo.findById(id).get();
 		
 		if(patchEmployee.getEmail() != null) {
@@ -69,7 +72,11 @@ public class EmployeeApiController {
 	@DeleteMapping(path="/{id}", consumes = "application/json")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void deleteEmployee(@PathVariable("id") Long id) {
+		try {
 		employeeRepo.deleteById(id);
+		} catch(EmptyResultDataAccessException e) {
+			
+		}
 	}
 
 }

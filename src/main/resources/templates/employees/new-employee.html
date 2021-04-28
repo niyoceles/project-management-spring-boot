@@ -8,16 +8,40 @@
 <nav th:replace="layouts :: navbar"></nav>
 	
 	<div class="container py-4">
-		<form th:action="@{/employees/save}" th:object="${employee}" method="POST">
+		<form action="#" th:action="@{/employees/save}" th:object="${employee}" method="POST">
+    
+ <div class="form-group">
+    <label for="exampleInputEmail1">First name</label>
+    <input type="email" placeholder="Employee first name" class="form-control" th:field="*{firstName}" />
+    <small id="emailHelp" class="form-text danger" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" style="color:red">FirstName error</small>
+ </div>
+ 
+  <div class="form-group">
+    <label for="exampleInputLastName">Last name</label>
+    <input type="text" placeholder="Employee first name" class="form-control" th:field="*{lastName}" />
+    <small id="emailHelp" class="form-text danger" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" style="color:red">Last name error</small>
+ </div>
+ 
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email</label>
+    <input type="email" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp" class="form-control" th:field="*{email}" />
+    <small id="emailHelp" class="form-text danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color:red">Email error</small>
+ </div>
 		
-		<!--This will be used to bind to the employee that was clicked on USED FOR UPDATES -->
-		<input type="hidden" th:field="${employee.employeeId}">
 		
-		<input type="text" placeholder="Employee firstname" th:field="${employee.firstName}">
+		
+ <!--        <input type="text" placeholder="Employee first name" th:field="*{firstName}" />
+         <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" style="color:red">First name Error</span>
+<br>
+		
 		<input type="text" placeholder="Employee lastname" th:field="${employee.lastName}">
+		<span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" style="color:red">Last name Error</span>
+<br>
 		<input type="text" placeholder="Employee email" th:field="${employee.email}">
-	    <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+		<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color:red">Email Error</span>
 		
+		-->
+<br>
 		<button type="submit">Create Employee</button>
 		
 		</form>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: header"></header>
+
+<body>
+<nav th:replace="layouts :: navbar"></nav>
+	
+	<div class="container py-4">
+		<form th:action="@{/employees/save}" th:object="${employee}" method="POST">
+		
+		<!--This will be used to bind to the employee that was clicked on USED FOR UPDATES -->
+		<input type="hidden" th:field="${employee.employeeId}">
+		
+		<input type="text" placeholder="Employee firstname" th:field="${employee.firstName}">
+		
+		<label th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Name Error</label>
+		
+		<input type="text" placeholder="Employee lastname" th:field="${employee.lastName}">
+		<input type="text" placeholder="Employee email" th:field="${employee.email}">
+	
+		
+		<button type="submit">Create Employee</button>
+		
+		</form>
+	</div>
+	
+</body>
+
+</html>

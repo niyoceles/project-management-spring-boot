@@ -2,9 +2,12 @@ package com.niyonsaba.pma.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +23,7 @@ public class EmployeeController {
 	EmployeeService employeeService;
 	
 	@GetMapping("/new")
-	public String displayEmployeeForm(Model model) {
+	public String displayEmployeeForm(Model model, Employee employee) {
 		
 		Employee anEmployee = new Employee();
 		
@@ -31,7 +34,11 @@ public class EmployeeController {
 	}
 	
 	@PostMapping("/save")
-	public String createEmployee(Employee employee, Model model) {
+	public String createEmployee(@Valid Employee employee, BindingResult bindingResult , Model model) {
+		
+		if (bindingResult.hasErrors()) {
+			return "employees/new-employee";
+		}
 		
 		employeeService.save(employee);
 		
@@ -54,7 +61,7 @@ public class EmployeeController {
 		
 		
 		model.addAttribute("employee", employee);
-		return "employees/new-employee";
+		return "employees/update-employee";
     }
 	
 	@GetMapping("/delete")
